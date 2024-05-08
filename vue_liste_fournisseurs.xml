@@ -1,0 +1,89 @@
+modifier la vue : liste fournisseur 
+
+j'ajoute le code suivant a la place
+
+<?xml version="1.0"?>
+<data>
+	<xpath expr="//tree" position="inside">
+		<header>
+			<button name="Synchronisation_function" type="object" string="Synchroniser" class="btn-primary"/>
+		</header>
+	</xpath>
+</data>	
+
+  
+
+je crée une nouvelle server-action dans la configuration -> technical -> Server Actions avec un model: contact et le type: python code 
+donc dans l'url je récupère id of button is : 1285
+suivant la video : https://www.youtube.com/watch?v=HC6Zw8A_uXo
+or : https://www.youtube.com/watch?v=R8eG6uOxHKw
+to display notification in Odoo: https://www.youtube.com/watch?v=naD0ybcE_pc
+
+ <!--     l'ajout du boutton par dalil  --> 
+  <xpath expr="//tree" position="inside">
+        <button name="1285" type="action" string="Synchroniser Zeeendoc" class="btn-primary"/>
+  </xpath>
+<!--  Fin de l'ajout du boutton -->
+
+quand je crée une nouvelle ligne pour view:
+<?xml version="1.0"?>
+<data>
+	<xpath expr="//tree" position="inside">
+			<button name="1285" type="action" string="Synchroniser" class="btn-primary"/>
+	</xpath>
+</data>
+
+
+
+
+			
+ 
+<data>
+  <xpath expr="//field[@name='state_id']" position="replace"/>
+  <xpath expr="//field[@name='display_name']" position="before">
+    <field name="x_studio_date_field_QDHEM"/>
+    <field name="x_studio_mettre_a_jour" string="Mettre-a-jour"/>
+  </xpath>
+  <xpath expr="//field[@name='display_name']" position="after">
+    <field name="x_studio_total_factur" optional="hide"/>
+    <field name="property_payment_term_id" optional="hide" options="{&quot;no_create&quot;:true}"/>
+    <field name="create_date" optional="hide"/>
+    <field name="create_uid" optional="hide"/>
+  </xpath>
+  <xpath expr="//field[@name='function']" position="attributes">
+    <attribute name="invisible"/>
+    <attribute name="attrs">{}</attribute>
+    <attribute name="optional">hide</attribute>
+  </xpath>
+  <xpath expr="//field[@name='function']" position="after">
+    <field name="ref" optional="hide"/>
+    <field name="id" optional="hide"/>
+    <field name="x_studio_contact_role_ids" widget="many2many_tags" attrs="{}" optional="hide" options="{&quot;no_create&quot;:true}"/>
+    <field name="siret" optional="hide"/>
+  </xpath>
+  <xpath expr="//field[@name='phone']" position="attributes">
+    <attribute name="optional">hide</attribute>
+  </xpath>
+  <xpath expr="//field[@name='email']" position="attributes">
+    <attribute name="optional">hide</attribute>
+  </xpath>
+  <xpath expr="//field[@name='user_id']" position="after">
+    <field name="x_studio_segmentation" widget="many2many_tags" optional="hide" options="{&quot;no_create&quot;:true}"/>
+  </xpath>
+  <xpath expr="//field[@name='activity_ids']" position="after">
+    <field name="street" optional="hide"/>
+    <field name="street2" optional="hide"/>
+    <field name="zip" optional="hide"/>
+  </xpath>
+  <xpath expr="//field[@name='category_id']" position="attributes">
+    <attribute name="options">{"color_field": "color", "no_create": true}</attribute>
+  </xpath>
+</data>
+
+            
+
+
+
+
+
+
