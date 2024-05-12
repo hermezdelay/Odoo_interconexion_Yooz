@@ -2,12 +2,25 @@
 
 https://{environment}/xyz/v1/api/service/{URIRessource}
 xyz here is: "SYSTHEN InvoiceHUB" for me
-environment = staging1v2.getyooz.com for technical test and eu1.getyooz.com for production 
+environment = staging1v2.getyooz.com for technical test and 
+              eu1.getyooz.com for production 
 
+ApplicationId = gg2d614d-a043-401d-91b7-0220gg32gg87
+                (exemple de la documentation)
+ApplicationId = 0c830919-fe22-4800-9cea-aa82012a7fda
+                (exemple de l'interface de Yooz)
 
 By the default the Client ID to use in order to test the public REST API is "yooz-public-api"
 
+        In order to use yooz public API you must logged in.
+        Oauth2 authentication password grant :
+        client_id: yooz-public-api
+        client_secret: let empty
+        username / password: your session login / password
 
+        Oauth2 authentication grant code :
+        client_id: yooz-stats
+        client_secret: let empty
 
 
 At the time, the following data can be synchronized:
@@ -107,3 +120,29 @@ By the default the Client ID to use in order to test the public REST API is "yoo
 
 3.2. Authentication
 Yooz Rising API now only supports Oauth2 (bearer) authentication.
+
+    3.2.2. OAuth 2.0 Password grant type
+        The password grant is one of the simplest OAuth grants and involves only one step: the application
+        presents a traditional username and password login form to collect the user’s credentials and
+        makes a POST request to the server to exchange the password for an access token.
+
+    POST -> https://eu1.getyooz.com/auth/realms/yooz/protocol/openid-connect/token
+        Authorization : No Auth
+        Headers : Content-Type = application/x-www-form-urlencoded
+        Body :  grant_type = password
+                client_id =  yooz-public-api
+                username = dalil.hermez@systhen.com
+                password = D@liSec201702
+                scope = offline_access   //pour avoie un acces permanent
+        Access_token = "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJWenhncnBtamdRQkZGbloxdlZaelpPQXBLLVdKU2Q1TmdGWTVKMzBXSjJjIn0.eyJleHAiOjE3MTUyNjQ2MzksImlhdCI6MTcxNTI2MjUzOSwianRpIjoiMDI1NTJmZDEtNWE4OC00OTQxLTgwZDYtMzgzODcxMzI1NGU3IiwiaXNzIjoiaHR0cHM6Ly9ldTEuZ2V0eW9vei5jb20vYXV0aC9yZWFsbXMveW9veiIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiIyNjQzMzRiYi0xMTkwLTRiMWEtYjJiNi0xYzZjNDZlMzdjMjciLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ5b296LXB1YmxpYy1hcGkiLCJzZXNzaW9uX3N0YXRlIjoiYmU4ZWZjNTItM2Y4NS00NWYyLTgwOGEtMTQyNzlhMjg0Njc4IiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMteW9veiIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwgb2ZmbGluZV9hY2Nlc3MiLCJzaWQiOiJiZThlZmM1Mi0zZjg1LTQ1ZjItODA4YS0xNDI3OWEyODQ2NzgiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmFtZSI6IkRhbGlsIEhFUk1FWiIsInByZWZlcnJlZF91c2VybmFtZSI6ImRhbGlsLmhlcm1lekBzeXN0aGVuLmNvbSIsImxvY2FsZSI6ImZyIiwiZ2l2ZW5fbmFtZSI6IkRhbGlsIiwiZmFtaWx5X25hbWUiOiJIRVJNRVoiLCJlbWFpbCI6ImRhbGlsLmhlcm1lekBzeXN0aGVuLmNvbSIsImdyb3VwIjpbXX0.unOkQ2pLCLIzuEJTRWU1IBlyixPj4z4hceV9d6t56bkQZ4TUtgL6APjnPBXkx6HS2J17HkDB78inMrDrN92p-06Nf3lefNUZrsq59VCGEJQgOw1Zrh0U6nV0jQ7QWe0tELtWxbU6W0g4vky_ul2f0n5gYFMKynYnROpSlV_PiYqE8SZnfIyl5wyJnPBOfaOPMUuYEeem7JDYQRubbwexS2bxuehQ6ZoYWOL-gNvYVxD8r-eN7MxZWE_SXGHtf5CEwTAseK7mOKQ_ms-e_Sp6hVsGnMTX63PJ2pyP8qQfHA5id_hIkuoMVxA0W7UKZQ3VmtRpO-QJZ0088ofVf4vt3chG8gMI_xssV0WxpMEcNRRG4eIodgRWaDl7duHkBQ4Hi3mmIyB9_S6mcO8dEb6SOi_URlMrctwMfeOvBYPBYI4k3P6brv58ehaCFDsayBLuiacqJo5t55edpej_heaVycl3cFxerS5f4JKJR8lov3r62NNsK2MDm_2dbz9dTmamctDTOHXjdb1moM5s5eCrKY-SdIY9ZUH59f-TJkgVpTYpshOZSJjIpGo1Xfr9qfttf_LTwFLusIXeu_-Ay2dB7E8GjpfAUUoFzP9DT_jLHlnMI_WMBKk-VONvw-qn6B0kJrb-D-gbrBaV0ILZaDVPt5f03PArs2tJmLHnCVfBQWo",
+
+        "expires_in": 2100,
+        "refresh_expires_in": 0,
+        "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI4YjNmNzk3NS0yNTQwLTRhM2ItYjNiNy01YWNiNDY0NTQwMmIifQ.eyJpYXQiOjE3MTUyNjI1MzksImp0aSI6IjlkZGFjZTYyLTI0ODgtNDYyOS05YjNhLWRlMDJiM2UwMzdiMiIsImlzcyI6Imh0dHBzOi8vZXUxLmdldHlvb3ouY29tL2F1dGgvcmVhbG1zL3lvb3oiLCJhdWQiOiJodHRwczovL2V1MS5nZXR5b296LmNvbS9hdXRoL3JlYWxtcy95b296Iiwic3ViIjoiMjY0MzM0YmItMTE5MC00YjFhLWIyYjYtMWM2YzQ2ZTM3YzI3IiwidHlwIjoiT2ZmbGluZSIsImF6cCI6Inlvb3otcHVibGljLWFwaSIsInNlc3Npb25fc3RhdGUiOiJiZThlZmM1Mi0zZjg1LTQ1ZjItODA4YS0xNDI3OWEyODQ2NzgiLCJzY29wZSI6InByb2ZpbGUgZW1haWwgb2ZmbGluZV9hY2Nlc3MiLCJzaWQiOiJiZThlZmM1Mi0zZjg1LTQ1ZjItODA4YS0xNDI3OWEyODQ2NzgifQ.38w3kwQABdBlkGW_qCkjIVdTbUphGYi0m-Hfsqq92yQ",
+
+3.2.3. Multi-application OAuth 2.0 Password grant (for
+partners)
+This authentication mode is only available for partners authorized by Yooz on our servers. The
+partner must also be authorized to access the customer application. The authorization must be done
+by the administrator of the customer application.
+
