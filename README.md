@@ -8,7 +8,9 @@ environment = staging1v2.getyooz.com for technical test and
 ApplicationId = gg2d614d-a043-401d-91b7-0220gg32gg87
                 (exemple de la documentation)
 ApplicationId = 0c830919-fe22-4800-9cea-aa82012a7fda
-                (exemple de l'interface de Yooz)
+                (exemple de l'interface API de Yooz)
+ApplicationId = 002a61f0-aad5-47b2-b04d-77433f63dcab
+                (depuis mon interface d'administration SYSTHEN pour url eu1.getyooz.com)
 
 By the default the Client ID to use in order to test the public REST API is "yooz-public-api"
 
