@@ -1,5 +1,5 @@
 ce fichiers a été importé depuis zeendoc est doit étre impérativement modifié car les deux logiciel ne sont  pas identiques
-et en plus il faut ajouter
+et en plus il faut ajouter des lignes effectives
 
 ancient code do views/fournisseur_view.xml
     <record id="fournisseur_view" model="ir.ui.view">
