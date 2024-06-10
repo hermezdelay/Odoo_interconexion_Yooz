@@ -2,7 +2,7 @@ ce fichiers a été importé depuis zeendoc est doit étre impérativement modif
 et en plus il faut ajouter des lignes effectives pour continuer a utiliser Odoo sans probleme 
 mais aujourd'hui j'ai eu un probleme puisque j'ai changé l'email
 aujourd'hui j'attend qu'ils me donnent l'acces a Github pour que je puisse réinitialiser la BDD
-
+aujourd'hui c'esl le bac
 ancient code do views/fournisseur_view.xml
     <record id="fournisseur_view" model="ir.ui.view">
         <field name="name">fournisseur.view</field>
