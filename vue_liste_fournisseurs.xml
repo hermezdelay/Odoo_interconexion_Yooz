@@ -4,6 +4,7 @@ mais aujourd'hui j'ai eu un probleme puisque j'ai changé l'email
 aujourd'hui j'attend qu'ils me donnent l'acces a Github pour que je puisse réinitialiser la BDD
 aujourd'hui c'esl le bac donc je fais que de la formation sur REACT JS
 le premier jour après l'aid el-adha
+aujourd'hui je vais commencer par apprendre le javacript
 ancient code do views/fournisseur_view.xml
     <record id="fournisseur_view" model="ir.ui.view">
         <field name="name">fournisseur.view</field>
